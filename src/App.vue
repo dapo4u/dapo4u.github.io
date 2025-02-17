@@ -1,81 +1,60 @@
 <template>
-  <div id="app">
-    <QuizGame class="quiz-container" />
-  </div>
+  <v-app>
+    <v-app-bar
+      app
+      color="primary"
+      dark
+    >
+      <div class="d-flex align-center">
+        <v-img
+          alt="Vuetify Logo"
+          class="shrink mr-2"
+          contain
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          transition="scale-transition"
+          width="40"
+        />
+
+        <v-img
+          alt="Vuetify Name"
+          class="shrink mt-1 hidden-sm-and-down"
+          contain
+          min-width="100"
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
+          width="100"
+        />
+      </div>
+
+      <v-spacer></v-spacer>
+
+      <v-btn
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        target="_blank"
+        text
+      >
+        <span class="mr-2">Latest Release</span>
+        <v-icon>mdi-open-in-new</v-icon>
+      </v-btn>
+    </v-app-bar>
+
+    <v-main>
+      <HelloWorld/>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import QuizGame from './components/QuizGame.vue';
+import HelloWorld from './components/HelloWorld';
 
 export default {
   name: 'App',
+
   components: {
-    QuizGame,
+    HelloWorld,
   },
+
+  data: () => ({
+    //
+  }),
 };
 </script>
-
-<style lang="scss">
-@import 'normalize-scss';
-@include normalize();
-
-html {
-  line-height: 1.5;
-}
-h1 {
-  font-size: 3em;
-  font-style: italic;
-}
-h2 {
-  font-size: 1.75rem;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-.button {
-  min-width: 140px;
-  padding: 1.25rem 2rem;
-  font-family: -system-ui, sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.2;
-  color: #313030;
-  background-color: $btn-bg;
-  border: 0;
-  border-radius: 1px;
-  white-space: nowrap;
-  text-decoration: none;
-  text-transform: capitalize;
-  transition: all 0.1s;
-  cursor: pointer;
-  &:hover {
-    color: #fff;
-    background-color: $btn-hover;
-  }
-  &[disabled] {
-    color: #313030;
-    background-color: #a9aaac;
-    pointer-events: none;
-  }
-}
-#app {
-  display: flex;
-  align-items: center;
-  min-height: calc(100vh - 80px);
-  padding: 2.5rem 0.625rem;
-  text-align: center;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  color: #fff;
-  background-color: #0e1324;
-  letter-spacing: 0.5px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-</style>
