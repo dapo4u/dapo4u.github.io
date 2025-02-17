@@ -11,7 +11,7 @@
     "axios": "^1.5.1",
     "core-js": "^3.31.1",
     "eslint": "^8.57.1",
-    "normalize-scss": "^7.0.1",
+    "normalize-scss": "^8.0.0",
     "vue": "^2.7.15",
     "vuedraggable": "^2.24.3",
     "vuetify": "^2.6.0"
