@@ -10,7 +10,7 @@
   "dependencies": {
     "axios": "^1.5.1",
     "core-js": "^3.31.1",
-    "eslint": "^8.57.1",
+    "eslint": "^9.21.0",
     "normalize-scss": "^7.0.1",
     "vue": "^2.7.15",
     "vuedraggable": "^2.24.3",
